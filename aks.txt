@@ -1,0 +1,168 @@
+
+az aks get-credentials -g atpid-eu-rg-db_tw_clt_eprof -n universalprofile
+
+kubectl get nodes 
+
+az aks browser -g atpid-eu-rg-db_tw_clt_eprof -n universalprofile
+
+docker tag webapi4:dev eptacrdemo.azurecr.io/webapi4:v1
+
+docker tag webapi5:dev eptacrdemo.azurecr.io/webapi5:1.234
+
+docker tag webapi5:dev acrdemopremium.azurecr.io/webapi5:1.234
+
+az login
+az account set --subscription atpigroup-dev
+az acr login -n eptacrdemo
+az acr login -n universalprofile.azurecr.io
+
+docker login acrdemopremium.azurecr.io -u acrdemopremium -p wxuS9m5Q+iIH/Ox+CDlf0=obhBm/pPuk
+
+az acr login eptacrdemo -u eptacrdemo -p upMCdXjbCq213v6CwPqc8RPHc32lMZ=p
+
+docker login eptacrdemo.azurecr.io -u eptacrdemo -p upMCdXjbCq213v6CwPqc8RPHc32lMZ=p
+
+docker login acrdemopremium.azurecr.io -u acrdemopremium -p a+GJv5W4iAV5+UNZ5Dr7AjSoUhTe4UY1
+
+#1
+az login 
+az account set --subscription atpigroup-dev
+az acr login -n universalprofile
+
+#2
+az aks get-credentials -g atpid-eu-rg-db_tw_clt_eprof -n universalprofile
+kubectl get nodes 
+az aks browse -g atpid-eu-rg-db_tw_clt_eprof -n universalprofile
+
+doker push eptacrdemo.azurecr.io/webapi4:v1
+
+
+kubectl create secret 
+docker-registry eptacrdemo 
+--docker-server=eptacrdemo.azurecr.io 
+--docker-username=eptacrdemo 
+--docker-password=wxuS9m5Q+iIH/Ox+CDlf0=obhBm/pPuk --docker-email=murali.vaddiparthi@valuelabs.com
+
+kubectl create secret docker-registry acrdemopremium --docker-server=acrdemopremium.azurecr.io --docker-username=acrdemopremium --docker-password=wxuS9m5Q+iIH/Ox+CDlf0=obhBm/pPuk --docker-email=murali.vaddiparthi@valuelabs.com
+
+kubectl create clusterrolebinding kubernetes-dashboard1 -n kube-system --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard1
+
+rajitha.kolan4sdfsd@g.com/Test@12345
+gunaseelan@otgm.com/Tr4vel@123
+
+kubectl create secret docker-registry acrdemovl --docker-server=acrdemovl.azurecr.io --docker-username=acrdemovl --docker-password=+b69lN8QcdN+hfbr4jN=ATplBJk/4LVe --docker-email=murali.vaddiparthi@valuelabs.com
+
+docker login acrdemovl.azurecr.io -u acrdemovl -p +b69lN8QcdN+hfbr4jN=ATplBJk/4LVe
+
+kubectl scale -n default deployment weather-pod --replicas=1
+
+0/2 nodes are available: 2 node(s) didn't match Pod's node affinity/selector.
+pod didn't trigger scale-up: 1 max node group size reached
+0/1 nodes are available: 1 node(s) didn't match Pod's node affinity/selector.
+
+kubectl create clusterrolebinding service-reader-pod --clusterrole=service-reader    --serviceaccount=default:default
+
+For k8s dashboard 
+1) az aks get-credentials -g atpid-eu-rg-db_tw_clt_eprof -n universalprofile
+2) C:\Users\mkvaddiparthi\.kube --- copy the token from bottom
+3) kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.2.0/aio/deploy/recommended.yaml
+4) kubectl proxy
+5) http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/secret?namespace=default
+
+az acr create -g demorg1  -n  acrdemoVL --admin-enabled --sku premium
+
+kubectl create secret docker-registry acrdemovl --docker-server=acrdemovl.azurecr.io --docker-username=acrdemovl --docker-password=oYpJWfYms7Kg+TnpXGwoVT4aYjq0z2zj --docker-email=murali.vaddiparthi@valuelabs.com
+
+docker login acrdemovl.azurecr.io -u acrdemovl -p oYpJWfYms7Kg+TnpXGwoVT4aYjq0z2zj
+
+docker tag webapi1:dev acrdemovl.azurecr.io/webapi1:1.234
+
+docker push acrdemovl.azurecr.io/webapi1:1.234
+
+az acr create -g atpid-eu-rg-db_tw_clt_eprof  -n  acrdemopremium --admin-enabled --sku premium
+
+Grants full access to manage all resources, but does not allow you to assign roles in Azure RBAC, manage assignments in Azure Blueprints, or share image galleries.
+
+kubectl create deploy myweb7 --image=nginx
+
+kubectl expose deployment myweb7 --port=8765 --target-port=9376 --name=examplesvc --type=LoadBalancer
+
+Svc load balancer IP is : 20.103.210.63:8765
+Getting the error, "This site can’t be reached 20.103.210.63 took too long to respond."
+
+
+-------------------------------------------------
+az login
+
+az account set --subscription atpigroup-dev
+
+az aks get-credentials -g atpid-eu-rg-db_tw_clt_eprof -n universalprofile
+
+kubectl create deploy myweb8 --image=nginx
+
+kubectl expose deployment myweb8 --port=8765 --target-port=9376 --name=examplesvc1 --type=LoadBalancer
+
+kubectl get pods -o wide 
+
+kubectl describe svc examplesvc1
+
+kubectl create deploy myweb9 --image=nginx
+
+kubectl expose deployment myweb9 --port=8080 --target-port=80 --name=examplesvc2 --type=LoadBalancer
+
+
+The client with object id does not have authorization to perform action 'Microsoft.Resources/subscriptions/resourceGroups/read' over scope '/subscriptions//resourceGroups/' or the scope is invalid. If access was recently granted, please refresh your credentials.
+
+
+kubectl run testserver --image=python:3.6 --port=5000 --command -- python -m http.server 5000
+
+kubectl expose deploy testserver --type=LoadBalancer --port=8080 --target-port=5000
+
+docker pull stacksimplify/dockerintro-springboot-helloworld-rest-api:1.0.0-RELEASE
+
+kubectl run my-first-pod --image stacksimplify/kubenginx:1.0.0
+kubectl expose pod my-first-pod --type=LoadBalancer --port=80 --name=my-first-serviec
+
+17.523346601000796, 78.29598186508554
+
+
+kubectl describe node
+
+
+Machine ID:                 ad3d0f2a3782464a8329f0a5140aafe2
+  System UUID:                5e09ec32-c8cb-4858-b4c4-1a4fca86a872
+  Boot ID:                    4a655a52-e8d9-4b3f-858f-d187c31ee377
+  Kernel Version:             5.4.0-1069-azure
+  OS Image:                   Ubuntu 18.04.6 LTS
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  containerd://1.4.12+azure-2
+  Kubelet Version:            v1.21.9
+  Kube-Proxy Version:         v1.21.9
+PodCIDR:                      10.244.0.0/24
+PodCIDRs:                     10.244.0.0/24
+ProviderID:                   azure:///subscriptions/2695a0b6-0753-4789-bef8-0df04dbe7dd1/resourceGroups/mc_demorg1_aksdemovl_westeurope/providers/Microsoft.Compute/virtualMachineScaleSets/aks-agentpool-13751048-vmss/virtualMachines/0
+Non-terminated Pods:          (10 in total)
+  Namespace                   Name                                   CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
+  ---------                   ----                                   ------------  ----------  ---------------  -------------  ---
+  default                     myapp-pod-c768db549-dhc4b              500m (12%)    500m (12%)  128Mi (0%)       128Mi (0%)     169m
+  kube-system                 azure-ip-masq-agent-wdv9c              100m (2%)     500m (12%)  50Mi (0%)        250Mi (0%)     3h25m
+  kube-system                 coredns-845757d86-qqtcs                100m (2%)     3 (77%)     70Mi (0%)        500Mi (1%)     3h26m
+  kube-system                 coredns-845757d86-srkqz                100m (2%)     3 (77%)     70Mi (0%)        500Mi (1%)     3h25m
+  kube-system                 coredns-autoscaler-5f85dc856b-rkf96    20m (0%)      200m (5%)   10Mi (0%)        500Mi (1%)     3h26m
+  kube-system                 csi-azuredisk-node-zjrbw               30m (0%)      0 (0%)      60Mi (0%)        400Mi (1%)     3h25m
+  kube-system                 csi-azurefile-node-cnnhd               30m (0%)      0 (0%)      60Mi (0%)        500Mi (1%)     3h25m
+  kube-system                 kube-proxy-245fb                       100m (2%)     0 (0%)      0 (0%)           0 (0%)         3h25m
+  kube-system                 metrics-server-774f99dbf4-v6lrp        44m (1%)      1 (25%)     55Mi (0%)        2000Mi (7%)    3h26m
+  kube-system                 tunnelfront-67d46849cb-g6j42           10m (0%)      0 (0%)      64Mi (0%)        0 (0%)         148m
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource                       Requests     Limits
+  --------                       --------     ------
+  cpu                            1034m (26%)  8200m (212%)
+  memory                         567Mi (2%)   4778Mi (17%)
+  ephemeral-storage              0 (0%)       0 (0%)
+  hugepages-1Gi                  0 (0%)       0 (0%)
+  hugepages-2Mi                  0 (0%)       0 (0%)
+  attachable-volumes-azure-disk  0            0
+Events:                          <none>
